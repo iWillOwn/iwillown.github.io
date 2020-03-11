@@ -1,0 +1,68 @@
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 1.05em 1.7em;
+    min-width: 170px;
+
+    border: 1px solid @gray;
+    border-radius: 1.8em;
+    background: none;
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 1.06rem;
+    line-height: 1.1;
+    text-align: center;
+    color: @black;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition: background-color @trans, color @trans, box-shadow @trans, border-color @trans;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background-color: @black;
+        box-shadow: 2px 2px 10px rgba(@black, .24);
+        color: @white;
+        border-color: @black;
+    }
+
+    + .btn {
+        margin-left: 1rem;
+
+    }
+
+    /*Modificators*/
+    &--sm {
+        padding: .7em 1.1em;
+        font-size: .94rem;
+        font-weight: 700;
+        border-width: 2px;
+        min-width: 0;
+    }
+
+    &--thin {
+        min-width: 145px;
+
+        font-size: .8rem;
+    }
+
+    @media @tablet {
+        font-size: 1rem;
+        padding: 1em 1.5em;
+        min-width: 150px;
+    }
+
+    @media @mobile-sm {
+        display: block;
+        width: 100%;
+
+        + .btn {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+    }
+}
